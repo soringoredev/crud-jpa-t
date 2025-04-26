@@ -18,7 +18,9 @@ public class CrudAppApplication {
 	@Bean
 	public CommandLineRunner commandLineRunner(StudentDAO studentDAO) {
 		return runner -> {
-			createStudent(studentDAO);
+			//createStudent(studentDAO);
+
+			readStudent(StudentDAO);
 		};
 	}
 
@@ -34,6 +36,10 @@ public class CrudAppApplication {
 
 		// display the ID of the saved student
 		System.out.println("Saved student. Generated id: " + newStudent.getId());
+
+	}
+
+	private  void readStudent(StudentDAO studentDAO) {
 
 	}
 
